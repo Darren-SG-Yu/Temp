@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Instagram OAuth Callback</title>
+</head>
+<body>
+  <h1>Instagram OAuth Callback</h1>
+  <p id="code"></p>
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    const code = params.get('code') || params.get('error');
+    document.getElementById('code').innerText = code;
+  </script>
+</body>
+</html>
